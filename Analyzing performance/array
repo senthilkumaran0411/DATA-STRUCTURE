@@ -1,11 +1,18 @@
-# Initialize the list with numbers 1 to 9
-number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+import array
 
-# Add 'raj' at the end of the list using append (since Python lists don't have fixed size)
-number.append('raj')
+# Initialize the array with numbers 1 to 9 (array of integers 'i')
+number = array.array('i', [1, 2, 3, 4, 5, 6, 7, 8, 9])
 
-# Insert 'senthil' at the start of the list using insert at index 0
-number.insert(0, 'senthil')
+# Since arrays are fixed in data type, we can't append a string directly like 'raj'.
+# To keep it similar, we'll convert the array back to a list, modify it, and convert it back to an array.
 
-# Print the updated list
-print(number)
+# Convert array to list
+number_list = number.tolist()
+
+# Append 'raj' and 'senthil' (though arrays can't directly store strings)
+number_list.append('raj')  # Appending 'raj' to the end of the list
+number_list.insert(0, 'senthil')  # Inserting 'senthil' at the start of the list
+
+# Print the modified list
+print(number_list)
+
