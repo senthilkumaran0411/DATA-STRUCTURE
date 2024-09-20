@@ -1,1 +1,11 @@
+# Initialize the list with numbers 1 to 9
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+# Add 'raj' at the end of the list using append (since Python lists don't have fixed size)
+number.append('raj')
+
+# Insert 'senthil' at the start of the list using insert at index 0
+number.insert(0, 'senthil')
+
+# Print the updated list
+print(number)
